@@ -1,4 +1,4 @@
-import { Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
+import { Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
 import User from "./user";
 import Court from "./court";
 
@@ -8,9 +8,11 @@ class Booking {
     id: number;
 
     @ManyToOne(() => User, { onDelete: "CASCADE" })
+    @JoinColumn()
     user: User;
 
     @ManyToOne(() => Court, { onDelete: "SET NULL" })
+    @JoinColumn()
     court: Court;
 }
 

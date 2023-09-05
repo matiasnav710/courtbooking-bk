@@ -14,8 +14,8 @@
     "revert": "export NODE_ENV=production && npx typeorm-ts-node-commonjs migration:revert -d ./dist/src/start/datasource.js",
     "start:dev": "export NODE_ENV=development && yarn nodemon src/app.ts",
     "generate": "export NODE_ENV=development && npx typeorm-ts-node-commonjs migration:generate ./src/migrations/SchemaUpdate  -d ./src/start/datasource.ts",
-    "seed:dev": "export NODE_ENV=development && npx ts-node src/seedes/main.seed.ts",
-    "seed": "export NODE_ENV=production && npx ts-node dist/src/seedes/main.seed.js"
+    "seed:dev": "export NODE_ENV=development && npx ts-node src/seed/main.seed.ts",
+    "seed": "export NODE_ENV=production && npx ts-node dist/src/seed/main.seed.js"
   },
   "keywords": [],
   "author": "",

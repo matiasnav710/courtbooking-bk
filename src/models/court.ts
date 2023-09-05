@@ -1,4 +1,4 @@
-import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm"
 import Venue from "./venue";
 import Sport from "./sport";
 
@@ -10,10 +10,12 @@ class Court {
     @Column()
     name: string;
 
-    @OneToOne(() => Venue, { onDelete: "CASCADE" })
+    @ManyToOne(() => Venue, { onDelete: "CASCADE" })
+    @JoinColumn()
     venue: Venue;
 
-    @OneToOne(() => Sport, { onDelete: "SET NULL" })
+    @ManyToOne(() => Sport, { onDelete: "SET NULL" })
+    @JoinColumn()
     sport: Sport;
 }
 
