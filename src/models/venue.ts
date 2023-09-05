@@ -10,6 +10,12 @@ class Venue {
 
     @Column()
     address: string;
+
+    @Column("timestamptz")
+    startTime: Date;
+
+    @Column("timestamptz")
+    endTime: Date;
 }
 
 export default Venue
