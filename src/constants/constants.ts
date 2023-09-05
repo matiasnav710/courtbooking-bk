@@ -4,4 +4,5 @@ export enum Routes {
     USER = "/api/users",
     COURT = "/api/courts",
     VENUE = "/api/venues",
+    BOOKING = "/api/bookings",
 }
