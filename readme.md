@@ -13,6 +13,7 @@ CREATE USER court;
 CREATE DATABASE court;
 GRANT ALL PRIVILEGES ON DATABASE court TO court;
 ALTER USER court WITH LOGIN;
+ALTER USER court WITH PASSWORD '1234';
 \c court postgres
 GRANT ALL ON SCHEMA public TO court;
 ```
