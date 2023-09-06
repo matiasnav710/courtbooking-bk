@@ -4,6 +4,6 @@ import auth from "../middlewares/auth";
 
 const bookings = Router()
 
-bookings.post("/creatBooking", auth, createBooking)
+bookings.post("/createBooking", auth, createBooking)
 
 export { bookings as bookingRouter }
