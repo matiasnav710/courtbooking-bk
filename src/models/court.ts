@@ -10,6 +10,12 @@ class Court {
     @Column()
     name: string;
 
+    @Column({default:""})
+    description: string;
+
+    @Column({default:""})
+    image: string;
+
     @ManyToOne(() => Venue, { onDelete: "CASCADE" })
     @JoinColumn()
     venue: Venue;

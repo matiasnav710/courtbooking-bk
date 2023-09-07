@@ -5,4 +5,5 @@ export enum Routes {
     COURT = "/api/courts",
     VENUE = "/api/venues",
     BOOKING = "/api/bookings",
+    SPORTS = "/api/sports"
 }

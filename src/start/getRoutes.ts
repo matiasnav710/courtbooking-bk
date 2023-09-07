@@ -5,6 +5,7 @@ import { courtRouter } from "../routers/court"
 import { venueRouter } from "../routers/venue"
 import { bookingRouter } from "../routers/booking"
 import cors from "cors"
+import { sportRouter } from "../routers/sports"
 
 const getRoutes = (app: Express) => {
     app.use(json())
@@ -13,6 +14,7 @@ const getRoutes = (app: Express) => {
     app.use(Routes.COURT, courtRouter)
     app.use(Routes.VENUE, venueRouter)
     app.use(Routes.BOOKING, bookingRouter)
+    app.use(Routes.SPORTS, sportRouter)
 }
 
 export default getRoutes

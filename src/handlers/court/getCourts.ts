@@ -14,4 +14,5 @@ const getCourts = handleRouteErrors(async(req, res) => {
     res.status(200).send(courts)
 })
 
+
 export default getCourts
