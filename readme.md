@@ -1,5 +1,7 @@
 # Court Booking Backend
 
+# install database locally
+install database locally by following this tutorial https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-macos/
 ## Setting up .env.development file
 JWT_SECRET=this_is_super_secret
 PG_USER=postgres (change it with your database user)
