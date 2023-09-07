@@ -1,81 +1,16 @@
-# Court Backend Setup Guide
+# Court Booking Backend
 
-## Setup Database
+## Setting up .env.development file
+JWT_SECRET=this_is_super_secret
+PG_USER=postgres (change it with your database user)
+PG_HOST=localhost
+PG_DATABASE=court (create database with name court in postgresql)
+PG_PASSWORD=password (change it with your database password)
+PG_PORT=5432 (change it with the port running your local database )
+PORT=3400
 
-Go to terminal and run
-command: ```psql -U postgres```
-
-Execute these commands one by one after that.
-Make sure to terminate each command with ;
-
-```sql
-CREATE USER court;
-CREATE DATABASE court;
-GRANT ALL PRIVILEGES ON DATABASE court TO court;
-ALTER USER court WITH LOGIN;
-ALTER USER court WITH PASSWORD '1234';
-\c court postgres
-GRANT ALL ON SCHEMA public TO court;
-```
-
-# How to create migrations with typeorm?
-
-## Syntax:
-```
-npx typeorm migration:create <path>
-```
-
-## Example:
-```
-npx typeorm migration:create ./src/migrations/MyMigration
-```
-
-# Generating migrations
-
-When you make any changes in entities, you can run ```yarn generate``` and it will
-automatically generate migration for you which you can run afterwards.
-
-# How to run migrations?
-
-In Development you can run
-```
-yarn migrate:dev
-npm run migrate:dev 
-```
-In production you can run
-```
-yarn migrate
-npm run migrate
-```
-
-# How to rollback migrations?
-
-In Development you can run
-```
-yarn revert:dev
-npm run revert:dev 
-```
-In production you can run
-```
-yarn revert
-npm run revert
-```
-
-# How to seed data?
-
-In Development you can run
-```
-yarn seed:dev
-npm run seed:dev 
-```
-In production you can run
-```
-yarn seed
-npm run seed
-```
-
-# How to create a production build
-
-You need to run ```yarn build```
-Afterwards you can run the production build by ```yarn start```
-Make sure you configure ```.env.production```.
+## start project
+1. setup env as per above step
+2. npm run migrate:dev (to run migrations)
+3. npm run seed:dev (to seed some dummy data into app)
+4. npm run dev (to run app in development)
